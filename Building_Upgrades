@@ -95,7 +95,7 @@ Zitadel Modification
 These files favicon.ico  and favicon.png to replace browser tab icon.  There located in directory  /home/zitadel-2.42.10/.
 
 Files that need to be modified. Each one of these files has URL called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. 
-
+```
 /home/zitadel-2.42.10/console/src/index.html (Browser Button && icon on tab)
 /home/zitadel-2.42.10/console/src/assets/i18n/en.json (Most of all the text for the front end)
 /home/zitadel-2.42.10/console/src/app/modules/header/header.component.html (documentation button)
@@ -111,6 +111,7 @@ Files that need to be modified. Each one of these files has URL called https://z
 /home/zitadel-2.42.10/console/src/app/pages/instance/instance-members/instance-members.component.html ( (i) external link correction)
 /home/zitadel-2.42.10/console/src/app/modules/domains/domains.component.html ( (i) external link correction)
 /home/zitadel-2.42.10/console/src/app/pages/users/user-detail/user-detail/user-detail.component.html ( (i) external link correction)
+```
 NOTE: Logo Size Increase. For some reason  when running MAKE it writes over this file.
 
 /home/zitadel-2.42.10/internal/api/ui/login/static/resources/themes/zitadel/css/zitadel.css ( size  logo increase)
