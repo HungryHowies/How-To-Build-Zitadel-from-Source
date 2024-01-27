@@ -6,6 +6,7 @@ The following Documentation is how to build Zitadel from source.
 Building and upgrades,
 
 Prerequisite:
+```
 Ubuntu 22.0.4   4 CPU and 16 GB RAM
 CockroachDB Version 23.x.x completed
 Nginx setup and working.
@@ -15,6 +16,7 @@ apt install net-tools
 apt install mlocate
 apt install make
 network configurations (static IP Address & DNS)
+```
 Login as root, go to home directory.
 
 Navigate to home directory. 
