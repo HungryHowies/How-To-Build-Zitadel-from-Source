@@ -120,7 +120,8 @@ Check Version.
 go version
 ```
 Zitadel Modification 
-These files favicon.ico  and favicon.png to replace browser tab icon.  There located in directory  /home/zitadel-2.42.10/.
+
+These files favicon.ico and favicon.png to replace browser tab icon.  There located in directory  /home/zitadel-2.42.10/.
 
 Files that need to be modified. Each one of these files has URL called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. 
 ```
@@ -145,6 +146,7 @@ NOTE: Logo Size Increase. For some reason  when running MAKE it writes over this
 /home/zitadel-2.42.10/internal/api/ui/login/static/resources/themes/zitadel/css/zitadel.css ( size  logo increase)
 ```
 Removing Console Buttons 
+
 Documentation button navigate to this file.
 ```
 vi /home/zitadel-2.42.10/console/src/app/modules/header/header.component.html
@@ -158,6 +160,7 @@ Removal lines 171 thru 173 as shown below, remove and save.
 173    </a>
 ```
 Remove Social Links
+
 Remove the social link  modify this file
 ```
 vi /home/zitadel-2.42.10/console/src/app/modules/footer/footer.component.html
@@ -193,6 +196,7 @@ now := $(shell date --rfc-3339=seconds | sed 's/ /T/')
 VERSION ?= v2.42.10                                  <---------- HERE
 ```
 Compile Zitadel 
+
 Execute the Makefile.
 ```
 root# make
@@ -238,6 +242,7 @@ ID=QUERY-fwofw Message=Errors.SMTPConfig.NotFound Parent=(sql: no rows in result
 Login and check configuration in the console that were made. If there are no issues, then CTRL -C and create a service for Zitadel.
 
 Zitadel Service
+
 Make Zitadel service file.
 ```
 vi /etc/systemd/system/zitadel.service
