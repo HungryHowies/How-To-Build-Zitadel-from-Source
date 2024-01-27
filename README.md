@@ -1,6 +1,7 @@
 # How-To-Build-Zitadel-from-Source
 
 Zitadel Build
+
 The following Documentation is how to build Zitadel from source.
 
 Building and upgrades,
@@ -337,6 +338,7 @@ Start  Zitadel service
 systemctl start zitadel
 ```
 Organizing Home directory for future Upgrades.
+
 Using the Home directory, I have different version downloaded. Each one has an executable file for that version. 
 
 ![image](https://github.com/HungryHowies/How-To-Build-Zitadel-from-Source/assets/22652276/04ffd46a-e22f-4afe-8d54-8f643981205d)
