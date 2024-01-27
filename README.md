@@ -337,29 +337,6 @@ Start  Zitadel service
 ```
 systemctl start zitadel
 ```
-Results:
-Login
-
-![image](https://github.com/HungryHowies/How-To-Build-Zitadel-from-Source/assets/22652276/288a32b6-3657-48e6-97ac-8a782286c7da)
-
-Documentation button on header and the social buttons on the footer are gone.
-
-![image](https://github.com/HungryHowies/How-To-Build-Zitadel-from-Source/assets/22652276/1bd9f1ae-618d-4263-b3cc-8746deca8e8a)
-
-Logout
-
-![image](https://github.com/HungryHowies/How-To-Build-Zitadel-from-Source/assets/22652276/7adbe989-2bd9-4c64-9c92-9c7566ee05ff)
-
-
-
-
-
-Organizing Home directory for future Upgrades.
-
-Using the Home directory, I have different version downloaded. Each one has an executable file for that version. 
-
-![image](https://github.com/HungryHowies/How-To-Build-Zitadel-from-Source/assets/22652276/04ffd46a-e22f-4afe-8d54-8f643981205d)
-
 
 
 
