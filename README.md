@@ -25,9 +25,9 @@ Navigate to home directory.
 cd /home
 ```
 Dependencies:
-```
-### Installing NodeJS-18.x first before npm. If not, it will install an incompatible version of Node ###
-```
+
+Installing NodeJS-18.x first before npm. If not, it will install an incompatible version of Node 
+
 Install NodeJS Version-18 package.
 ```
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
