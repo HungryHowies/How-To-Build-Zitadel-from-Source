@@ -238,8 +238,6 @@ Root# zitadel start-from-init --config defaults.yaml --steps steps.yaml --master
 ```
 Depending on the version you may see some WARN signs.  The error below shown means it can not find SMTP config, because I didn't create one.
 ```
-Level=warning msg="process events failed" caller="/home/zitadel-2.42.11/internal/eventstore/
-Level=warning msg="missing translation" args="map
 ID=QUERY-fwofw Message=Errors.SMTPConfig.NotFound Parent=(sql: no rows in result set)" projection=projections.notifications
 ```
 Login and check configuration in the console that were made. If there are no issues, then CTRL -C and create a service for Zitadel.
