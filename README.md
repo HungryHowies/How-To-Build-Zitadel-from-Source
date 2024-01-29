@@ -8,7 +8,7 @@ Building and upgrades,
 
 Prerequisite:
 ```
-Ubuntu 22.0.4   4 CPU and 16 GB RAM
+Ubuntu 22.0.4   4 CPU and 4 GB RAM
 CockroachDB Version 23.x.x completed
 Nginx setup and working.
 apt update && apt upgrade
@@ -77,6 +77,7 @@ Install Buf.
 npm install @bufbuild/buf
 ```
 Install Zitadel 
+
 Get Zitadel Release Open Source Code
 ```
 wget  https://github.com/zitadel/zitadel/archive/refs/tags/v2.42.10.tar.gz
@@ -102,7 +103,7 @@ Move Go directory.
 ```
 mv go /usr/local
 ```
-Create file.
+Create file for GO env.
 ```
 vi ~/.bash_profile
 ```
@@ -122,9 +123,9 @@ go version
 ```
 Zitadel Modification 
 
-These files favicon.ico and favicon.png to replace browser tab icon.  There located in directory  /home/zitadel-2.42.10/.
+There located in directory  /home/zitadel-2.42.10/.
 
-Files that need to be modified. Each one of these files has URL called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. 
+Files that might need to be modified. Each one of these files has URL called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. In this example I modified the following files. Not all files need to be edited.
 ```
 /home/zitadel-2.42.10/console/src/index.html (Browser Button && icon on tab)
 /home/zitadel-2.42.10/console/src/assets/i18n/en.json (Most of all the text for the front end)
@@ -142,17 +143,15 @@ Files that need to be modified. Each one of these files has URL called https://z
 /home/zitadel-2.42.10/console/src/app/modules/domains/domains.component.html ( (i) external link correction)
 /home/zitadel-2.42.10/console/src/app/pages/users/user-detail/user-detail/user-detail.component.html ( (i) external link correction)
 ```
-NOTE: Logo Size Increase. For some reason  when running MAKE it writes over this file.
-```
-/home/zitadel-2.42.10/internal/api/ui/login/static/resources/themes/zitadel/css/zitadel.css ( size  logo increase)
-```
+
 Removing Console Buttons 
 
-Documentation button navigate to this file.
+To modify or delete the Documentation button in the counsole navigate to this file.
+
 ```
 vi /home/zitadel-2.42.10/console/src/app/modules/header/header.component.html
 ```
-Removal lines 171 thru 173 as shown below, remove and save.
+Remove the following lines 171 thru 173 as shown below, and save.
 ```
 169    <span class="fill-space"></span>
 170
@@ -162,11 +161,12 @@ Removal lines 171 thru 173 as shown below, remove and save.
 ```
 Remove Social Links
 
-Remove the social link  modify this file
+Remove the social links at the bottom of console then these files need to be modified.
+The file that needs to be edited.
 ```
 vi /home/zitadel-2.42.10/console/src/app/modules/footer/footer.component.html
 ```
-Remove these lines. They are from 16  thru 30.
+Remove the following lines are from 16 thru 30.
 ```
 16         <a target="_blank" rel="noreferrer" href="https://github.com/zitadel">
 17          <i class="text-3xl lab la-github"></i>
@@ -186,7 +186,8 @@ Remove these lines. They are from 16  thru 30.
 ```
 Rest of the files need the URL replaced from zitadel.com to any URL/URI/URN or none.
 
-Adjust the Makefile
+Adjust the Makefile.
+
 The Makefile should be located in Zitadel's home directory for the build /home/zitadel-2.42.10/
 ```
 vi /home/zitadel-2.42.10/Makefile
@@ -212,15 +213,16 @@ cd /usr/local/bin
 ```
 Acquire the configurations files needed.
 
-Copy and paste from Zitadel Doc’s  "defaults.yaml && steps.yaml" . You can find these files here. 
+Copy and/or paste from Zitadel Doc’s "defaults.yaml && steps.yaml". 
+You can find these files here. 
 
- (https://zitadel.com/docs/self-hosting/manage/configure) 
+ (https://zitadel.com/docs/self-hosting/manage/configure)  
 
-Create runtime configuration file and then add the configuration.
+Edit the runtime configuration file as needed.
 ```
 vi /home/zitadel-2.42.10/defaults.yaml
 ```
-Create database initialization file and then add the configuration.
+Edit the database initialization file as needed.
 ```
 vi /home/zitadel-2.42.10/steps.yaml
 ```
@@ -234,7 +236,7 @@ When files “defaults.yaml && steps.yaml“ are completed then execute the foll
 ```
 Root# zitadel start-from-init --config defaults.yaml --steps steps.yaml --masterkey "MasterkeyNeedsToHave32Characters" --tlsMode external
 ```
-Depending on the version you may see some WARN signs.  The error below shown means  it can not find SMTP config, because I didn't create one.
+Depending on the version you may see some WARN signs.  The error below shown means it can not find SMTP config, because I didn't create one.
 ```
 Level=warning msg="process events failed" caller="/home/zitadel-2.42.11/internal/eventstore/
 Level=warning msg="missing translation" args="map
@@ -257,20 +259,15 @@ Description=zitadel
 Type=simple
 User=root
 Group=root
-
-
-
 EnvironmentFile=-/usr/local/bin/zitadel
 ExecStart=/usr/local/bin/zitadel  start  --masterkey "MasterkeyNeedsToHave32Characters"  --tlsMode external
 WorkingDirectory=/usr/local/bin/
-
 Restart=always
 Nice=19
 LimitNOFILE=16384
-
 # When stopping, how long to wait before giving up and sending SIGKILL?
 # Keep in mind that SIGKILL on a process can cause data loss.
-TimeoutStopSec=infinity
+TimeoutStopSec=60
 
 [Install]
 WantedBy=multi-user.target
@@ -289,9 +286,9 @@ Overview:
 
 Follow the above steps to build new version of Zitadel. Download the new version, copy any configuration files that were modify in the previous Zitadel version to the new Zitadel version, build/configure using the Makefile, stop Zitadel service, remove old executable OR copy new Zitadel executable over the old executable in this working directory.( /usr/local/bin/). 
 
-The only difference is copying the modified configuration files previously before the build and the executable file "Zitadel" will replace the old one in directory ( /usr/local/bin).
+Copying the modified configuration files  before the build and the executable file "Zitadel" will replace the old one in directory ( /usr/local/bin).
 
-Files that should be copied over are shown below. Navigate to Zitadel current version.
+Depending on what files were modified they need to be copied over to Zitadel current version.
 ```
 cd /home/zitadel-2.42.10/
 ```
