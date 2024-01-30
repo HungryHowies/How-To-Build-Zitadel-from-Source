@@ -292,13 +292,13 @@ cd /home/zitadel-2.42.10/
 ```
 Copy files over to new version.
 ```
-cp console/src/index.html  /home/ zitadel-2.42.11/console/src/index.html 
-cp console/src/assets/i18n/en.json  /home/ zitadel-2.42.11/console/src/assets/i18n/en.json 
-cp console/src/app/modules/header/header.component.html  /home/ zitadel-2.42.11/console/src/app/modules/header/header.component.html
-cp console/src/app/modules/footer/footer.component.html  /home/ zitadel-2.42.11/console/src/app/modules/footer/footer.component.html 
-cp console/src/app/pages/home/home.component.html  /home/ zitadel-2.42.11/console/src/app/pages/home/home.component.html 
+cp console/src/index.html  /home/zitadel-2.42.11/console/src/index.html 
+cp console/src/assets/i18n/en.json  /home/zitadel-2.42.11/console/src/assets/i18n/en.json 
+cp console/src/app/modules/header/header.component.html  /home/zitadel-2.42.11/console/src/app/modules/header/header.component.html
+cp console/src/app/modules/footer/footer.component.html  /home/zitadel-2.42.11/console/src/app/modules/footer/footer.component.html 
+cp console/src/app/pages/home/home.component.html  /home/zitadel-2.42.11/console/src/app/pages/home/home.component.html 
 cp console/src/app/utils/onboarding.ts  /home/ zitadel-2.42.11/console/src/app/utils/onboarding.ts  
-cp console/src/app/pages/users/user-list/user-list.component.html /home/ zitadel-2.42.11/console/src/app/pages/users/user-list/user-list.component.html
+cp console/src/app/pages/users/user-list/user-list.component.html /home/zitadel-2.42.11/console/src/app/pages/users/user-list/user-list.component.html
 cp console/src/app/pages/signedout/signedout.component.html /home/zitadel-2.42.11/console/src/app/pages/signedout/signedout.component.html 
 cp console/src/app/pages/users/user-list/user-list.component.html /home/zitadel-2.42.11/console/src/app/pages/users/user-list/user-list.component.html
 cp console/src/app/pages/projects/projects.component.html /home/zitadel-2.42.11/console/src/app/pages/projects/projects.component.html
