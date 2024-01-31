@@ -300,7 +300,6 @@ cp console/src/app/pages/home/home.component.html  /home/zitadel-2.42.11/console
 cp console/src/app/utils/onboarding.ts  /home/ zitadel-2.42.11/console/src/app/utils/onboarding.ts  
 cp console/src/app/pages/users/user-list/user-list.component.html /home/zitadel-2.42.11/console/src/app/pages/users/user-list/user-list.component.html
 cp console/src/app/pages/signedout/signedout.component.html /home/zitadel-2.42.11/console/src/app/pages/signedout/signedout.component.html 
-cp console/src/app/pages/users/user-list/user-list.component.html /home/zitadel-2.42.11/console/src/app/pages/users/user-list/user-list.component.html
 cp console/src/app/pages/projects/projects.component.html /home/zitadel-2.42.11/console/src/app/pages/projects/projects.component.html
 cp console/src/app/pages/orgs/org-members/org-members.component.html /home/zitadel-2.42.11/console/src/app/pages/orgs/org-members/org-members.component.html
 cp console/src/app/pages/instance/instance-members/instance-members.component.html /home/zitadel-2.42.11/console/src/app/pages/instance/instance-members/instance-members.component.html 
