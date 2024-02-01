@@ -104,7 +104,7 @@ Check Version.
 ```
 go version
 ```
-# Install Zitadel 
+#  Zitadel Source
 
 Get Zitadel Release Open Source Code
 ```
