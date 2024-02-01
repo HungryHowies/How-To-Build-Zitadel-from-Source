@@ -315,6 +315,7 @@ vi /home/zitadel-2.42.11/console/src/app/pages/users/user-list/user-list.compone
 vi/home/zitadel-2.42.11/console/src/app/modules/domains/domains.component.html 
 ```
 The Makefile should be located in Zitadel's home directory for the new build (/home/zitadel-2.42.11).
+
 ```
 vi /home/zitadel-2.42.11/Makefile
 ```
@@ -322,6 +323,10 @@ Edit the following lines to match the package version download. This will be sho
 ```
 now := $(shell date --rfc-3339=seconds | sed 's/ /T/')
 VERSION ?= v2.42.11                                  <---------- HERE
+```
+Run make
+```
+root@zitadel-build:/home/zitadel-2.42.11# make
 ```
 Stop Zitadel service
 ```
