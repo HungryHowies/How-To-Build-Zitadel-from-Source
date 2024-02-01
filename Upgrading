@@ -23,7 +23,7 @@ cp console/src/app/pages/signedout/signedout.component.html /home/zitadel-2.42.1
 cp console/src/app/pages/signedout/signedout.component.scss  /home/zitadel-2.42.10/console/src/app/pages/signedout/signedout.component.scss 
 
 
-Dont  copy  Just adjustthis section-- >>.  mat-icon-button href="https://zitadel.com/docs/concepts/structure/users"
+Adjust these files in this section-- >>.  mat-icon-button href="https://zitadel.com/docs/concepts/structure/users"
   
 
 vi /home/zitadel-2.42.11/console/src/app/pages/users/user-detail/user-detail/user-detail.component.html
