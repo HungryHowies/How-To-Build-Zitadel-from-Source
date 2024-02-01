@@ -40,10 +40,7 @@ Check Version
 ```
 node –version
 ```
-Installing npm this is a package manager for the JavaScript programming language maintained by npm.
-```
-apt install npm
-```
+
 Ensure npm version-10.3.0 is installed.
 ```
 npm install -g npm@10.3.0
