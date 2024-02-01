@@ -73,7 +73,7 @@ Install Buf.
 ```
 npm install @bufbuild/buf
 ```
-###Install GO
+# Install GO
 Get Go Package.
 ```
 wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
@@ -104,7 +104,7 @@ Check Version.
 ```
 go version
 ```
-###Install Zitadel 
+# Install Zitadel 
 
 Get Zitadel Release Open Source Code
 ```
