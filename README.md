@@ -18,7 +18,7 @@ apt install mlocate
 apt install make
 network configurations (static IP Address & DNS)
 ```
-Login as root, go to home directory.
+Login as root.
 
 Navigate to home directory. 
 ```
