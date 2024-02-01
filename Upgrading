@@ -60,6 +60,6 @@ Update tables.
 
 root@zitadel-build:/usr/local/bin/# zitadel setup   --config defaults.yaml --steps steps.yaml --masterkey "MasterkeyNeedsToHave32Characters"  --tlsMode external
 
-root@zitadel-build:/# Start  Zitadel service 
+Start Zitadel service. 
 
 root@zitadel-build:/# systemctl start zitadel
