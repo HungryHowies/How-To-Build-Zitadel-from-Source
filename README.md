@@ -2,7 +2,7 @@
 
 Zitadel Build
 
-The following Documentation is how to build Zitadel from source.
+The following Documentation is how to build Zitadel from source and  how to customize it. These are  steps from my home lab.
 
 Building and upgrades,
 
