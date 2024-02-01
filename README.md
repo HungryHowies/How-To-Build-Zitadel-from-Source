@@ -28,7 +28,7 @@ Dependencies:
 
 Installing NodeJS-18.x first before npm. If not, it will install an incompatible version of Node 
 
-Install NodeJS Version-18 package.
+###Install NodeJS Version-18 package.
 ```
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 ```
@@ -73,21 +73,7 @@ Install Buf.
 ```
 npm install @bufbuild/buf
 ```
-Install Zitadel 
-
-Get Zitadel Release Open Source Code
-```
-wget  https://github.com/zitadel/zitadel/archive/refs/tags/v2.42.10.tar.gz
-```
-Unzip package
-```
-sudo tar -xvf  v2.42.10.tar.gz
-```
-Change Directory 
-```
-cd /home/zitadel-2.42.10/
-```
-Install GO
+###Install GO
 Get Go Package.
 ```
 wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
@@ -118,6 +104,21 @@ Check Version.
 ```
 go version
 ```
+###Install Zitadel 
+
+Get Zitadel Release Open Source Code
+```
+wget  https://github.com/zitadel/zitadel/archive/refs/tags/v2.42.10.tar.gz
+```
+Unzip package
+```
+sudo tar -xvf  v2.42.10.tar.gz
+```
+Change Directory 
+```
+cd /home/zitadel-2.42.10/
+```
+
 Zitadel Modification 
 
 There located in directory  /home/zitadel-2.42.10/.
