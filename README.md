@@ -56,7 +56,7 @@ Install Yarn.
 ```
 npm install --global yarn
 ```
-Install Angular.
+Install Angular. (questionable)
 ```
 npm install @angular/animations@16.2.5
 ```
