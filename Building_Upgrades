@@ -6,6 +6,7 @@ Follow the above steps to build new version of Zitadel. Download the new version
 Copying the modified configuration files  before the build and the executable file "Zitadel" will replace the old one in directory ( /usr/local/bin).
 
 Depending on what files were modified they need to be copied over to Zitadel current version.
+
 ```
 cd /home/zitadel-2.42.10/
 ```
