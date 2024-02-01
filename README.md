@@ -292,19 +292,27 @@ cd /home/zitadel-2.42.10/
 ```
 Copy files over to new version.
 ```
-cp console/src/index.html  /home/zitadel-2.42.11/console/src/index.html 
-cp console/src/assets/i18n/en.json  /home/zitadel-2.42.11/console/src/assets/i18n/en.json 
-cp console/src/app/modules/header/header.component.html  /home/zitadel-2.42.11/console/src/app/modules/header/header.component.html
-cp console/src/app/modules/footer/footer.component.html  /home/zitadel-2.42.11/console/src/app/modules/footer/footer.component.html 
-cp console/src/app/pages/home/home.component.html  /home/zitadel-2.42.11/console/src/app/pages/home/home.component.html 
-cp console/src/app/utils/onboarding.ts  /home/ zitadel-2.42.11/console/src/app/utils/onboarding.ts  
-cp console/src/app/pages/users/user-list/user-list.component.html /home/zitadel-2.42.11/console/src/app/pages/users/user-list/user-list.component.html
-cp console/src/app/pages/signedout/signedout.component.html /home/zitadel-2.42.11/console/src/app/pages/signedout/signedout.component.html 
-cp console/src/app/pages/projects/projects.component.html /home/zitadel-2.42.11/console/src/app/pages/projects/projects.component.html
-cp console/src/app/pages/orgs/org-members/org-members.component.html /home/zitadel-2.42.11/console/src/app/pages/orgs/org-members/org-members.component.html
-cp console/src/app/pages/instance/instance-members/instance-members.component.html /home/zitadel-2.42.11/console/src/app/pages/instance/instance-members/instance-members.component.html 
-cp console/src/app/modules/domains/domains.component.html /home/zitadel-2.42.11/console/src/app/modules/domains/domains.component.html
-cp console/src/app/modules/domains/domains.component.html /home/zitadel-2.42.11/console/src/app/pages/users/user-detail/user-detail/user-detail.component.html 
+### Copy these file over to new version ###
+cp console/src/index.html  /home/zitadel-2.42.11/console/src/index.html 
+cp console/src/assets/i18n/en.json  /home/zitadel-2.42.11/console/src/assets/i18n/en.json 
+cp console/src/app/modules/header/header.component.html  /home/zitadel-2.42.11/console/src/app/modules/header/header.component.html
+cp console/src/app/modules/footer/footer.component.html  /home/zitadel-2.42.11/console/src/app/modules/footer/footer.component.html 
+cp console/src/app/pages/home/home.component.html  /home/zitadel-2.42.11/console/src/app/pages/home/home.component.html 
+cp console/src/app/utils/onboarding.ts  /home/ zitadel-2.42.11/console/src/app/utils/onboarding.ts  
+cp console/src/app/pages/signedout/signedout.component.html /home/zitadel-2.42.11/console/src/app/pages/signedout/signedout.component.html
+cp console/src/app/pages/signedout/signedout.component.scss  /home/zitadel-2.42.10/console/src/app/pages/signedout/signedout.component.scss 
+```
+
+Dont  copy  Just adjustthis section-- >>.  mat-icon-button href="https://zitadel.com/docs/concepts/structure/users"
+  
+```
+vi /home/zitadel-2.42.11/console/src/app/pages/users/user-detail/user-detail/user-detail.component.html
+vi /home/zitadel-2.42.11/console/src/app/pages/projects/projects.component.html
+vi /home/zitadel-2.42.11/console/src/app/pages/orgs/org-members/org-members.component.html
+vi /home/zitadel-2.42.11/console/src/app/pages/instance/instance-members/instance-members.component.html
+vi /home/zitadel-2.42.11/console/src/app/modules/domains/domains.component.html
+vi /home/zitadel-2.42.11/console/src/app/pages/users/user-list/user-list.component.html
+vi/home/zitadel-2.42.11/console/src/app/modules/domains/domains.component.html 
 ```
 The Makefile should be located in Zitadel's home directory for the new build (/home/zitadel-2.42.11).
 ```
