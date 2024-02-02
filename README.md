@@ -114,8 +114,8 @@ cd /home/zitadel-2.42.10/
 
 # Zitadel Modification 
 
-Files that might need to be modified. Each one of these files has URL called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. 
-In this example I modified the following files. Not all files need to be edited.
+Most of these files has URL in them called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. 
+I modified the following files. The discription shown in  "( )" states what was modified.
 ```
 /home/zitadel-2.42.10/console/src/index.html (Browser Button && icon on tab)
 /home/zitadel-2.42.10/console/src/assets/i18n/en.json (Most of all the text for the front end)
