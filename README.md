@@ -15,6 +15,7 @@ apt install net-tools
 apt install mlocate
 apt install make
 network configurations (static IP Address & DNS)
+Let's Encrypt certificates are completed.
 ```
 Login as root.
 
@@ -116,8 +117,8 @@ cd /home/zitadel-2.42.10/
 
 # Zitadel Modification 
 
-Most of these files has URL in them called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. 
-I modified the following files. The discription shown in  "( )" states what was modified.
+Most of these files has a URL in them called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. 
+I modified the following files with tThe discription shown in  "( )" states what was modified.
 ```
 /home/zitadel-2.42.10/console/src/index.html (Browser Button && icon on tab)
 /home/zitadel-2.42.10/console/src/assets/i18n/en.json (Most of all the text for the front end)
@@ -140,12 +141,12 @@ I modified the following files. The discription shown in  "( )" states what was 
 
 # Removing Console Buttons 
 
-To modify or delete the Documentation button in the counsole navigate to this file.
+To modify or delete the Documentation button in the console. Navigate to this file.
 
 ```
 vi /home/zitadel-2.42.10/console/src/app/modules/header/header.component.html
 ```
-Remove the following lines 171 thru 173 as shown below, and save.
+Remove/Edit the following lines 171 thru 173 as shown below, and save.
 ```
 169    <span class="fill-space"></span>
 170
@@ -155,12 +156,12 @@ Remove the following lines 171 thru 173 as shown below, and save.
 ```
 # Remove Social Links
 
-Remove the social links at the bottom of console then these files need to be modified.
-The file that needs to be edited.
+To modify or delete the Social Links button in the console. Navigate to this file.
+
 ```
 vi /home/zitadel-2.42.10/console/src/app/modules/footer/footer.component.html
 ```
-Remove the following lines are from 16 thru 30.
+Remove/Edit following lines are from 16 thru 30, and save.
 ```
 16         <a target="_blank" rel="noreferrer" href="https://github.com/zitadel">
 17          <i class="text-3xl lab la-github"></i>
@@ -178,15 +179,14 @@ Remove the following lines are from 16 thru 30.
 29          <i class="text-3xl lab la-youtube"></i>
 30        </a>
 ```
-Rest of these files need the URL replaced from zitadel.com to any URL/URI/URN or none.
 
 Adjust the Makefile.
 
-The Makefile should be located in Zitadel's home directory for the build /home/zitadel-2.42.10/
+The Makefile should be located in Zitadel's home directory for the build. Example: /home/zitadel-2.42.10/
 ```
 vi /home/zitadel-2.42.10/Makefile
 ```
-Edit the following lines to match the package version download. This will be shown in the console.
+Edit the following lines to match the package version download. This will be shown in the console after the build.
 ```
 now := $(shell date --rfc-3339=seconds | sed 's/ /T/')
 VERSION ?= v2.42.10                                  <---------- HERE
@@ -197,7 +197,7 @@ Execute the Makefile.
 ```
 root# make
 ```
-Once completed move executable.
+Once completed then move the executable as shown.
 ```
 mv zitadel  /usr/local/bin
 ```
@@ -208,29 +208,32 @@ cd /usr/local/bin
 Acquire the configurations files needed.
 
 Get Zitadel's runtime configuration files (i.e.,"defaults.yaml && steps.yaml"). 
-Those files are located here.
- (https://zitadel.com/docs/self-hosting/manage/configure)  
+
+Those files are located here. (https://zitadel.com/docs/self-hosting/manage/configure)  
 
 Edit the runtime configuration file/s as needed.
 ```
-vi /home/zitadel-2.42.10/defaults.yaml
+vi /usr/local/bin/defaults.yaml
 ```
 Edit the database initialization file as needed.
 ```
-vi /home/zitadel-2.42.10/steps.yaml
+vi /usr/local/bin/steps.yaml
 ```
 The runtime configuration file/s can be in the same directory as zitadel's executable, if not make sure you adjust permissions and add the Full Path when starting Zitadel for the first time.
-In this example I placed the runtime configuration file/s && Zitadel executable as shown below.
+In this example I placed the runtime configuration file/s && Zitadel executable in the same directory this is shown below.
 ```
  /usr/local/bin
 ```
+![image](https://github.com/HungryHowies/How-To-Build-Zitadel-from-Source/assets/22652276/eeed20f8-d2a6-4448-bcc4-e3e78834b139)
+
 All configurations must to be made prior to starting Zitadel.
 
-When the following files “defaults.yaml && steps.yaml“ configurations are completed then execute the following command.
+zitadel binary will read configuration from environment variables as shown below. 
 ```
 zitadel start-from-init --config defaults.yaml --steps steps.yaml --masterkey "MasterkeyNeedsToHave32Characters" --tlsMode external
 ```
-Login and check configuration in the console that were made. If there are no issues, then CTRL -C 
+NOTE: This setup is configured with TCP/TLS && FQDN. 
+Login and check configuration in the console that were made. If there are no issues, then CTRL -C.
 
 # Zitadel Service
 
