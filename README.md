@@ -26,9 +26,7 @@ cd /home
 ```
 Dependencies:
 
-Installing NodeJS-18.x first before npm. If not, it will install an incompatible version of Node 
-
-###Install NodeJS Version-18 package.
+# Install NodeJS Version-18 package and Dependency
 ```
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 ```
@@ -40,8 +38,7 @@ Check Version
 ```
 node –version
 ```
-
-Ensure npm version-10.3.0 is installed.
+Install npm version-10.3.0 .
 ```
 npm install -g npm@10.3.0
 ```
@@ -58,7 +55,7 @@ Install Sass.
 ```
 npm install -g sass
 ```
-Find where Sass is located.
+Find Sass.
 ```
 which sass
 ```
@@ -71,6 +68,7 @@ Install Buf.
 npm install @bufbuild/buf
 ```
 # Install GO
+
 Get Go Package.
 ```
 wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
@@ -103,24 +101,23 @@ go version
 ```
 #  Zitadel Source
 
-Get Zitadel Release Open Source Code
+Get Zitadel Release.
 ```
 wget  https://github.com/zitadel/zitadel/archive/refs/tags/v2.42.10.tar.gz
 ```
-Unzip package
+Unzip package.
 ```
 sudo tar -xvf  v2.42.10.tar.gz
 ```
-Change Directory 
+Change Directory. 
 ```
 cd /home/zitadel-2.42.10/
 ```
 
 # Zitadel Modification 
 
-There located in directory  /home/zitadel-2.42.10/.
-
-Files that might need to be modified. Each one of these files has URL called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. In this example I modified the following files. Not all files need to be edited.
+Files that might need to be modified. Each one of these files has URL called https://zitadel.com/something/something/. This can be replace by any URL/URI/URN. 
+In this example I modified the following files. Not all files need to be edited.
 ```
 /home/zitadel-2.42.10/console/src/index.html (Browser Button && icon on tab)
 /home/zitadel-2.42.10/console/src/assets/i18n/en.json (Most of all the text for the front end)
@@ -139,7 +136,7 @@ Files that might need to be modified. Each one of these files has URL called htt
 /home/zitadel-2.42.10/console/src/app/pages/users/user-detail/user-detail/user-detail.component.html ( (i) external link correction)
 ```
 
-Removing Console Buttons 
+# Removing Console Buttons 
 
 To modify or delete the Documentation button in the counsole navigate to this file.
 
@@ -154,7 +151,7 @@ Remove the following lines 171 thru 173 as shown below, and save.
 172      {{ 'MENU.DOCUMENTATION' | translate }}
 173    </a>
 ```
-Remove Social Links
+# Remove Social Links
 
 Remove the social links at the bottom of console then these files need to be modified.
 The file that needs to be edited.
@@ -179,7 +176,7 @@ Remove the following lines are from 16 thru 30.
 29          <i class="text-3xl lab la-youtube"></i>
 30        </a>
 ```
-Rest of the files need the URL replaced from zitadel.com to any URL/URI/URN or none.
+Rest of these files need the URL replaced from zitadel.com to any URL/URI/URN or none.
 
 Adjust the Makefile.
 
@@ -192,7 +189,7 @@ Edit the following lines to match the package version download. This will be sho
 now := $(shell date --rfc-3339=seconds | sed 's/ /T/')
 VERSION ?= v2.42.10                                  <---------- HERE
 ```
-Compile Zitadel 
+# Compile Zitadel 
 
 Execute the Makefile.
 ```
@@ -208,12 +205,11 @@ cd /usr/local/bin
 ```
 Acquire the configurations files needed.
 
-Copy and/or paste from Zitadel Doc’s "defaults.yaml && steps.yaml". 
-You can find these files here. 
-
+Get Zitadel's runtime configuration files (i.e.,"defaults.yaml && steps.yaml"). 
+Those files are located here.
  (https://zitadel.com/docs/self-hosting/manage/configure)  
 
-Edit the runtime configuration file as needed.
+Edit the runtime configuration file/s as needed.
 ```
 vi /home/zitadel-2.42.10/defaults.yaml
 ```
@@ -221,29 +217,28 @@ Edit the database initialization file as needed.
 ```
 vi /home/zitadel-2.42.10/steps.yaml
 ```
-Ensure these files are in this directory.  
+The runtime configuration file/s can be in the same directory as zitadel's executable, if not make sure you adjust permissions and add the Full Path when starting Zitadel for the first time.
+In this example I placed the runtime configuration file/s && Zitadel executable as shown below.
 ```
  /usr/local/bin
 ```
 All configurations must to be made prior to starting Zitadel.
 
-When files “defaults.yaml && steps.yaml“ are completed then execute the following command.
+When the following files “defaults.yaml && steps.yaml“ configurations are completed then execute the following command.
 ```
-Root# zitadel start-from-init --config defaults.yaml --steps steps.yaml --masterkey "MasterkeyNeedsToHave32Characters" --tlsMode external
+zitadel start-from-init --config defaults.yaml --steps steps.yaml --masterkey "MasterkeyNeedsToHave32Characters" --tlsMode external
 ```
-Depending on the version you may see some WARN signs.  The error below shown means it can not find SMTP config, because I didn't create one.
-```
-ID=QUERY-fwofw Message=Errors.SMTPConfig.NotFound Parent=(sql: no rows in result set)" projection=projections.notifications
-```
-Login and check configuration in the console that were made. If there are no issues, then CTRL -C and create a service for Zitadel.
+Login and check configuration in the console that were made. If there are no issues, then CTRL -C 
 
-Zitadel Service
+# Zitadel Service
+
+Create a service for Zitadel.
 
 Make Zitadel service file.
 ```
 vi /etc/systemd/system/zitadel.service
 ```
-Add the following to zitadel.service file.
+Add the following to zitadel.service file.  
 ```
 [Unit]
 Description=zitadel
@@ -275,6 +270,7 @@ systemctl start zitadel
 ```
 
 Upgrade Zitadel
+
 Overview: 
 
 Follow the above steps to build new version of Zitadel. Download the new version, copy any configuration files that were modify in the previous Zitadel version to the new Zitadel version, build/configure using the Makefile, stop Zitadel service, remove old executable OR copy new Zitadel executable over the old executable in this working directory.( /usr/local/bin/). 
