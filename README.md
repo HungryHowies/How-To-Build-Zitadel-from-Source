@@ -22,9 +22,9 @@ Navigate to home directory.
 ```
 cd /home
 ```
-Dependencies:
+# Dependencies:
 
-# Install NodeJS Version-18 package and Dependency
+Install NodeJS Version-18 package and Dependency
 ```
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 ```
