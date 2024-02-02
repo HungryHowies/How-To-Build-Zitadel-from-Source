@@ -101,7 +101,7 @@ go version
 
 Get Zitadel Release.
 
-Depending what version is requireds you can find them here https://github.com/zitadel/zitadel/releases 
+Depending what version is required, you can find them all here https://github.com/zitadel/zitadel/releases 
 ```
 wget  https://github.com/zitadel/zitadel/archive/refs/tags/v2.42.10.tar.gz
 ```
