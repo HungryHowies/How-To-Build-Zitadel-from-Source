@@ -15,7 +15,7 @@ apt install net-tools
 apt install mlocate
 apt install make
 network configurations (static IP Address & DNS)
-Let's Encrypt certificates are completed.
+Certificates are completed.
 ```
 Login as root.
 
