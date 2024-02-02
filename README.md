@@ -224,7 +224,8 @@ In this example I placed the runtime configuration file/s && Zitadel executable 
 ```
  /usr/local/bin
 ```
-![image](https://github.com/HungryHowies/How-To-Build-Zitadel-from-Source/assets/22652276/eeed20f8-d2a6-4448-bcc4-e3e78834b139)
+![image](https://github.com/HungryHowies/How-To-Build-Zitadel-from-Source/assets/22652276/b26add90-67bd-48e3-88e4-1289dafb39a8)
+
 
 All configurations must to be made prior to starting Zitadel.
 
