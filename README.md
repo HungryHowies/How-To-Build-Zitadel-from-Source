@@ -4,8 +4,6 @@ Zitadel Build
 
 The following Documentation is how to build Zitadel from source and  customize it. These are  steps from my home lab.
 
-Building and upgrades,
-
 Prerequisite:
 ```
 Ubuntu 22.0.4   4 CPU and 4 GB RAM
