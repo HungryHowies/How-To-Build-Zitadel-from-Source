@@ -35,7 +35,7 @@ apt install nodejs -y
 ```
 Check Version
 ```
-node –version
+node --version
 ```
 Install npm version-10.3.0 .
 ```
