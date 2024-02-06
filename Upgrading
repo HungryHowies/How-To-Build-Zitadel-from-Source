@@ -3,6 +3,7 @@
 
 
 Upgrade Zitadel
+
 Overview: 
 
 Follow the above steps to build new version of Zitadel. Download the new version, copy any configuration files that were modify in the previous Zitadel version to the new Zitadel version, build/configure using the Makefile, stop Zitadel service, remove old executable OR copy new Zitadel executable over the old executable in this working directory.( /usr/local/bin/). 
