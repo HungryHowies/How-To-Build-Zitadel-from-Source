@@ -63,10 +63,15 @@ InitProjections:
 
 Update tables.
 ```
+zitadel setup  --init-projections=true   --config defaults.yaml --steps steps.yaml --masterkey "MasterkeyNeedsToHave32Characters"  --tlsMode external
+```
+Or inable that in zitadel configurtion file.
+```
 root@zitadel-build:/usr/local/bin/# zitadel setup   --config defaults.yaml --steps steps.yaml --masterkey "MasterkeyNeedsToHave32Characters"  --tlsMode external
 ```
 
 Start Zitadel service. 
+
 ```
 
 root@zitadel-build:/# systemctl start zitadel
