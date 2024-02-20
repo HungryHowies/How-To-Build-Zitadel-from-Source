@@ -136,7 +136,7 @@ I modified the following files with the discription shown in  "( )" states what 
 /home/zitadel-2.42.10/console/src/app/modules/domains/domains.component.html ( (i) external link correction)
 /home/zitadel-2.42.10/console/src/app/pages/users/user-detail/user-detail/user-detail.component.html ( (i) external link correction)
 /home/zitadel-2.42.10/console/src/app/pages/projects/owned-projects/owned-project-detail/application-grid/application-grid.component.html ( (i) external link correction)
-/home/zitadel-2.42.10/console/src/app/pages/projects/owned-projects/owned-pcd roject-detail/owned-project-detail.component.html  ( (i) external link correction)
+/home/zitadel-2.42.10/console/src/app/pages/projects/owned-projects/owned-project-detail/owned-project-detail.component.html  ( (i) external link correction)
 /home/zitadel-2.42.10/console/src/app/pages/projects/apps/app-detail/app-detail.component.html  ( (i) external link correction)
 ```
 
