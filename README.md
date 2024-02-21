@@ -121,7 +121,16 @@ Most of these files has a URL in them called https://zitadel.com/something/somet
 I modified the following files with the discription shown in  "( )" states what was modified.
 ```
 /home/zitadel-2.42.10/console/src/index.html (Browser Button && icon on tab)
+```
+NOTE: using sed for editing the language file.
+```
+sed '1,/ZITADEL/ s/ZITADEL/SOMENAME/' en.json  > new.file
+```
+```
 /home/zitadel-2.42.10/console/src/assets/i18n/en.json (Most of all the text for the front end)
+```
+
+```
 /home/zitadel-2.42.10/console/src/app/modules/header/header.component.html (documentation button)
 /home/zitadel-2.42.10/console/src/app/modules/footer/footer.component.html (removed social link at the bottom of the page)
 /home/zitadel-2.42.10/console/src/app/pages/home/home.component.html (UI Console called MORE SHORTCUTS section “ Get Started”)
@@ -139,6 +148,8 @@ I modified the following files with the discription shown in  "( )" states what 
 /home/zitadel-2.42.10/console/src/app/pages/projects/owned-projects/owned-project-detail/owned-project-detail.component.html  ( (i) external link correction)
 /home/zitadel-2.42.10/console/src/app/pages/projects/apps/app-detail/app-detail.component.html  ( (i) external link correction)
 ```
+
+
 
 # Removing Console Buttons 
 
