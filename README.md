@@ -124,7 +124,7 @@ I modified the following files with the discription shown in  "( )" states what 
 ```
 NOTE: using sed for editing the language file.
 ```
-sed '1,/ZITADEL/ s/ZITADEL/SOMENAME/' en.json  > new.file
+sed -i 's/ZITADEL/STARTREK/g' en.json
 ```
 ```
 /home/zitadel-2.42.10/console/src/assets/i18n/en.json (Most of all the text for the front end)
